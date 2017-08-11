@@ -13,22 +13,22 @@ let entityValue;
 let apiUrl = 'https://itunes.apple.com/search?term=';
 
 
-$searchButton.on('click', function(e){
+$searchButton.on('click', function(e) {
   e.preventDefault();
 
   let $entityInput = $(".search-type:checked");
 
-entityValue = $entityInput.val();
+  entityValue = $entityInput.val();
   console.log(entityValue);
   searchTerm = $termInput.val();
-    $('.results-container').empty();
+  $('.results-container').empty();
   fetchData(searchTerm, entityValue);
 
 })
 
 function fetchData(searchTerm, entityValue) {
-let searchUrl = apiUrl + encodeURI(searchTerm) + "&entity=" + entityValue + "&limit=24";
-console.log(searchUrl);
+  let searchUrl = apiUrl + encodeURI(searchTerm) + "&entity=" + entityValue + "&limit=24";
+  console.log(searchUrl);
   fetch(searchUrl).then(function(res) {
     return res.json();
   }).then(start);
@@ -45,20 +45,20 @@ function displayTracks(itunesResults) {
   let source = $('#results-template').html();
   let template = handlebars.compile(source);
 
-  itunesResults.forEach(function(song){
-  let $songHtml = $(template(song));
+  itunesResults.forEach(function(song) {
+    let $songHtml = $(template(song));
     $songHtml.find('.track').data('song', song);
-  $('.results-container').append($songHtml);
+    $('.results-container').append($songHtml);
 
-})
+  })
 }
 
-$choseSong.on('click', '.track', function(e){
-    let $trackPlay = $(e.target);
-    let song = $trackPlay.data('song');
-    console.log(song);
-    if (song.kind === "song") {
-      $('.js-track-player').attr('src', song.previewUrl);
-    } else if (song.kind === "music-video")
-      $('.js-video-player').attr('src', song.previewUrl);
-  })
+$choseSong.on('click', '.track', function(e) {
+  let $trackPlay = $(e.target);
+  let song = $trackPlay.data('song');
+  console.log(song);
+  if (song.kind === "song") {
+    $('.js-track-player').attr('src', song.previewUrl);
+  } else if (song.kind === "music-video")
+    $('.js-video-player').attr('src', song.previewUrl);
+})

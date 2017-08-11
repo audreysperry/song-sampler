@@ -1,14 +1,11 @@
-
 // Bootstrap Variables
 $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
-
 // Import Bootstrap
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 
-
 *,
-*::before,
-*::after {
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -17,41 +14,51 @@ img {
 }
 
 
-.results-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-  padding: 40px 200px;
-  margin: 0 auto;
+.search {
+  display: block;
 
+  .form-display {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .search-button {
+    height: 40px;
+  }
+
+  .entity {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
 }
+[type='radio'] {
+display: none;
+}
+
+
 
 .song-result {
-  width: 200px;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
+height:  250px;
 }
 
 .artist {
   font-size: 20px;
-  margin: 0px;
+  margin: 0;
 }
 
 .album {
   font-size: 18px;
-  margin: 0px;
+  margin: 0;
 }
 
 .track {
   font-size: 16px;
   text-decoration: none;
   color: black;
-
 }
 
 .track-head {
-  margin: 0px;
+  margin: 0;
 }
