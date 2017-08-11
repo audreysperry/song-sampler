@@ -1,0 +1,57 @@
+
+// Bootstrap Variables
+$icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
+
+// Import Bootstrap
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+.results-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding: 40px 200px;
+  margin: 0 auto;
+
+
+}
+
+.song-result {
+  width: 200px;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+}
+
+.artist {
+  font-size: 20px;
+  margin: 0px;
+}
+
+.album {
+  font-size: 18px;
+  margin: 0px;
+}
+
+.track {
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+
+}
+
+.track-head {
+  margin: 0px;
+}
