@@ -1,50 +1,57 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title>Song Sampler</title>
-    <link rel="stylesheet" href="css/app.css">
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <h1>Song Sampler</h1>
-      </header>
-      <section class="player">
-        <audio class="music-player js-track-player" controls="controls" autoplay src=""></audio>
-        <video class="music-player js-video-player" controls="controls" autoplay src=""></video>
-      </section>
-      <section class="search">
-        <form class="js-search-form navbar-left navbar-form" role="search">
-          <div class="form-group">
-            <input type="text" class="form-control js-button-input" placeholder="Search for an Artist">
-            <p>Select one:</p>
-        <input id="entity_1" class="search-type" type="radio" name="entity" value="musicTrack" required>
-        <label for="entity_1">Track</label><br>
-        <input id="entity_2" class="search-type" type="radio" name="entity" value="musicVideo">
-        <label for="entity_2">Music Video</label><br>
-        <input id="entity_3" class="search-type" type="radio" name="entity" value="album">
-        <label for="entity_3">Album</label><br>
-        <input id="entity_4" class="search-type" type="radio" name="entity" value="musicTrack">
-        <label for="entity_4">Artist</label><br>
-          </div>
-          <button type="submit" class="btn btn-default js-search-button">Search</button>
-        </form>
-      </section>
-      <section class="results-container">
-          <!-- HTML created and appended with javascript -->
 
-      </section>
-    </div>
-    <script id="results-template" type="text/x-handlebars-template">
-    <div class="js-result song-result">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+  <title>Song Sampler</title>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Song Sampler</h1>
+    </header>
+    <section class="player">
+      <audio class="music-player js-track-player" controls="controls" autoplay src=""></audio>
+      <video class="music-player js-video-player" controls="controls" autoplay src=""></video>
+    </section>
+    <section class="search">
+      <form class="js-search-form navbar-form form-display" role="search">
+          <div class="form-group">
+          <input type="text" class="form-control js-button-input" placeholder="Search for an Artist">
+          </div>
+          <div class="entity btn-group" data-toggle="buttons">
+            <input autocomplete="off" id="entity_1" class="search-type" type="radio" name="entity" value="musicTrack" required>
+            <label class="btn btn-primary active" for="entity_1">Track</label><br>
+            <input autocomplete="off" id="entity_2" class="search-type" type="radio" name="entity" value="musicVideo">
+            <label class="btn btn-primary active" for="entity_2">Music Video</label><br>
+            <input autocomplete="off" id="entity_3" class="search-type" type="radio" name="entity" value="album">
+            <label class="btn btn-primary active" for="entity_3">Album</label><br>
+            <input autocomplete="off" id="entity_4" class="search-type" type="radio" name="entity" value="musicTrack">
+            <label class="btn btn-primary active" for="entity_4">Artist</label><br>
+          </div>
+          <button type="submit" class="btn btn-default js-search-button search-button">Search</button>
+      </form>
+    </section>
+    <section class="container-fluid">
+      <div class="row results-container">
+          <!-- HTML created and appended with javascript -->
+      </div>
+
+
+    </section>
+  </div>
+  <script id="results-template" type="text/x-handlebars-template">
+    <div class="js-result song-result col-sm-4 col-md-4 col-lg-4">
       <img src="{{artworkUrl100}}" alt="">
       <h2 class="artist">{{artistName}}</h2>
       <p class="album">{{collectionName}}</p>
       <h3 class="track-head"><a class="track" href="#">{{trackName}}</a></h3>
     </div>
-    </script>
-    <script src="js/bundle.js"></script>
-  </body>
+  </script>
+  <script src="js/bundle.js"></script>
+</body>
+
 </html>

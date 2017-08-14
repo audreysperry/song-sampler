@@ -5732,36 +5732,46 @@ button.close {
   .hidden-print {
     display: none !important; } }
 *,
-*::before,
-*::after {
+*::after,
+*::before {
   box-sizing: border-box; }
 
 img {
   max-width: 100%; }
 
-.results-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-  padding: 40px 200px;
-  margin: 0 auto; }
+.search {
+  display: block; }
+  .search .form-display {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .search .search-button {
+    height: 40px; }
+  .search .entity {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+
+[type='radio'] {
+  display: none; }
 
 .song-result {
-  width: 200px; }
+  height: 250px; }
 
 .artist {
   font-size: 20px;
-  margin: 0px; }
+  margin: 0; }
 
 .album {
   font-size: 18px;
-  margin: 0px; }
+  margin: 0; }
 
 .track {
   font-size: 16px;
@@ -5769,6 +5779,6 @@ img {
   color: black; }
 
 .track-head {
-  margin: 0px; }
+  margin: 0; }
 
 /*# sourceMappingURL=app.css.map */
