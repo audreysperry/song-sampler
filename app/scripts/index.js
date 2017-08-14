@@ -19,7 +19,6 @@ $searchButton.on('click', function(e) {
   let $entityInput = $(".search-type:checked");
 
   entityValue = $entityInput.val();
-  console.log(entityValue);
   searchTerm = $termInput.val();
   $('.results-container').empty();
   fetchData(searchTerm, entityValue);
@@ -28,7 +27,6 @@ $searchButton.on('click', function(e) {
 
 function fetchData(searchTerm, entityValue) {
   let searchUrl = apiUrl + encodeURI(searchTerm) + "&entity=" + entityValue + "&limit=24";
-  console.log(searchUrl);
   fetch(searchUrl).then(function(res) {
     return res.json();
   }).then(start);
