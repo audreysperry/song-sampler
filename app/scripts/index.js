@@ -1,8 +1,9 @@
 let $ = require('jquery');
 let handlebars = require('handlebars');
-
-let $searchButton = $('.js-search-button');
-let $termInput = $('.js-button-input');
+let $musicVideoSearchButton = $('.js-musicvideo-search-button');
+let $musicVideoSearchTerm = $('.js-musicvideo-button-input');
+let $songSearchButton = $('.js-song-search-button');
+let $songTermInput = $('.js-song-button-input');
 let $choseSong = $('.results-container');
 
 let searchTerm;
@@ -12,14 +13,23 @@ let entityValue;
 
 let apiUrl = 'https://itunes.apple.com/search?term=';
 
-
-$searchButton.on('click', function(e) {
+//song & artist search buttons
+$songSearchButton.on('click', function(e) {
   e.preventDefault();
 
-  let $entityInput = $(".search-type:checked");
+  entityValue = "musicTrack";
+  searchTerm = $songTermInput.val();
+  $('.results-container').empty();
+  fetchData(searchTerm, entityValue);
 
-  entityValue = $entityInput.val();
-  searchTerm = $termInput.val();
+})
+
+// music video search button
+$musicVideoSearchButton.on('click', function(e) {
+  e.preventDefault();
+
+  entityValue = "musicVideo";
+  searchTerm = $musicVideoSearchTerm.val();
   $('.results-container').empty();
   fetchData(searchTerm, entityValue);
 

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+  <title>Song Sampler</title>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+  <div class="container">
+    <section class="player">
+      <video class="music-player js-video-player" controls="controls" autoplay src=""></video>
+    </section>
+    <section class="search">
+      <img class="search-icon" src="images/video.png" alt="">
+      <form class="js-search-form navbar-form form-display" role="search">
+          <div class="form-group">
+          <input type="text" class="form-control js-musicvideo-button-input mv-button-input" placeholder="Search for a music video">
+          </div>
+          <button type="submit" class="btn js-musicvideo-search-button search-button-mv">Search</button>
+      </form>
+      <div class="alternate-options">
+        <a class="choose-artist alt-opt-img" href="artist.html"><img src="images/Artist2.png" alt="">Search for an artist</a>
+        <a class="choose-track alt-opt-img" href="song.html"><img src="images/song2.png" alt="">Search for a song</a>
+      </div>
+    </section>
+    <section class="container-fluid">
+      <div class="row results-container">
+          <!-- HTML created and appended with javascript -->
+      </div>
+
+
+    </section>
+  </div>
+  <script id="results-template" type="text/x-handlebars-template">
+    <div class="js-result song-result col-sm-4 col-md-4 col-lg-4">
+      <img src="{{artworkUrl100}}" alt="">
+      <h2 class="artist">{{artistName}}</h2>
+      <p class="album">{{collectionName}}</p>
+      <h3 class="track-head"><a class="track" href="#">{{trackName}}</a></h3>
+    </div>
+  </script>
+  <script src="js/bundle.js"></script>
+</body>
+
+</html>

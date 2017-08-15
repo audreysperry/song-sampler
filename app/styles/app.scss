@@ -9,35 +9,13 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
   box-sizing: border-box;
 }
 
+
+body {
+  font-family: 'Helvetica';
+}
 img {
   max-width: 100%;
 }
-
-
-.search {
-  display: block;
-
-  .form-display {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .search-button {
-    height: 40px;
-  }
-
-  .entity {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-}
-[type='radio'] {
-display: none;
-}
-
-
 
 .song-result {
 height:  250px;
@@ -61,4 +39,130 @@ height:  250px;
 
 .track-head {
   margin: 0;
+}
+
+
+.search-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 40px;
+}
+
+.search-icon {
+  width: 100px;
+
+}
+
+.wrapper {
+  max-width: 800px;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.search-title {
+  font-family: 'helvetica';
+  color: #504F51;
+  font-size: 45px;
+  font-weight: 200;
+  text-align: center;
+  margin-bottom: 30px;
+
+
+}
+
+.search-term {
+  font-family: 'helvetica';
+  color: #504F51;
+  font-size: 30px;
+  font-weight: 200;
+  text-align: center;
+
+
+}
+
+.video-image {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.search-link:hover {
+  text-decoration: none;
+}
+
+.music-player {
+  display: none;
+}
+
+.search {
+  // max-width: 800px;
+  // position: fixed;
+  // top: 40%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-button-artist {
+  background-color: #A43CC1;
+  color: #fff;
+  margin-left: -4px;
+  border-radius: 0px;
+}
+
+.search-button-song {
+  background-color: #198786;
+  color: #fff;
+  margin-left: -4px;
+  border-radius: 0px;
+}
+
+.search-button-mv {
+  background-color: #E3846D;
+  color: #fff;
+  margin-left: -4px;
+  border-radius: 0px;
+}
+
+.song-button-input {
+  border: 2px solid #198786;
+  border-radius: 0px;
+}
+
+.mv-button-input {
+  border: 2px solid #E3846D;
+  border-radius: 0px;
+}
+
+.artist-button-input {
+  border: 2px solid #A43CC1;
+  border-radius: 0px;
+}
+
+.form-display {
+  margin-top: 30px;
+}
+
+.alternate-options {
+  display: flex;
+  flex-wrap: wrap;
+  width: 250px;
+  flex-direction: column;
+}
+
+.alternate-options a {
+  color: #686769;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.alternate-options img {
+  margin-right: 10px;
+  margin-bottom: 3px;
+
 }
