@@ -9,37 +9,40 @@
 </head>
 
 <body>
-  <div class="container">
-    <section class="player">
-      <audio class="music-player js-track-player" controls="controls" autoplay src=""></audio>
-    </section>
-    <section class="search">
-      <img class="search-icon" src="images/Artist.png" alt="">
-      <form class="js-search-form navbar-form form-display" role="search">
-          <div class="form-group">
-          <input type="text" class="form-control js-song-button-input artist-button-input" placeholder="Search for an artist">
-          </div>
-          <button type="submit" class="btn js-song-search-button search-button-artist">Search</button>
-      </form>
-      <div class="alternate-options">
-        <a class="choose-mv" href="music-video.html"><img src="images/video2.png" alt="">Search for a music video</a>
-        <a class="choose-track" href="song.html"><img src="images/song2.png" alt="">Search for a song</a>
-      </div>
-    </section>
-    <section class="container-fluid">
-      <div class="row results-container">
-          <!-- HTML created and appended with javascript -->
-      </div>
+  <div class="container-wrapper">
+    <div class="container">
+      <section class="player">
+        <audio class="music-player js-track-player" controls="controls" autoplay src=""></audio>
+      </section>
+      <section class="search">
+        <img class="search-icon" src="images/Artist.png" alt="">
+        <form class="js-search-form navbar-form form-display" role="search">
+            <div class="form-group">
+            <input type="text" class="form-control js-song-button-input artist-button-input" placeholder="Search for an artist">
+            </div>
+            <button type="submit" class="btn js-song-search-button search-button-artist">Search</button>
+        </form>
+        <div class="alternate-options">
+          <a class="choose-mv" href="music-video.html"><img src="images/video2.png" alt="">Search for a music video</a>
+          <a class="choose-track" href="song.html"><img src="images/song2.png" alt="">Search for a song</a>
+        </div>
+      </section>
+      <section class="container-fluid">
+        <div class="row results-container">
+            <!-- HTML created and appended with javascript -->
+        </div>
 
 
-    </section>
+      </section>
+    </div>
   </div>
+
   <script id="results-template" type="text/x-handlebars-template">
-    <div class="js-result song-result col-sm-4 col-md-4 col-lg-4">
-      <img src="{{artworkUrl100}}" alt="">
-      <h2 class="artist">{{artistName}}</h2>
-      <p class="album">{{collectionName}}</p>
-      <h3 class="track-head"><a class="track" href="#">{{trackName}}</a></h3>
+    <div class="js-result song-result col-sm-3 col-md-3 col-lg-3">
+      <img class="artwork" src="{{artworkUrl100}}" alt="">
+      <h2 class="artist">Artist: {{artistName}}</h2>
+      <p class="album">Album: {{collectionName}}</p>
+      <h3 class="track-head"><a class="track" href="#">Song: {{trackName}}</a></h3>
     </div>
   </script>
   <script src="js/bundle.js"></script>

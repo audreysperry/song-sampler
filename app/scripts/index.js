@@ -67,6 +67,8 @@ $choseSong.on('click', '.track', function(e) {
   console.log(song);
   if (song.kind === "song") {
     $('.js-track-player').attr('src', song.previewUrl);
+  
   } else if (song.kind === "music-video")
     $('.js-video-player').attr('src', song.previewUrl);
+
 })
