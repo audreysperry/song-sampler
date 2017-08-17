@@ -67,8 +67,12 @@ $choseSong.on('click', '.track', function(e) {
   console.log(song);
   if (song.kind === "song") {
     $('.js-track-player').attr('src', song.previewUrl);
-  
-  } else if (song.kind === "music-video")
-    $('.js-video-player').attr('src', song.previewUrl);
 
-})
+  } else if (song.kind === "music-video") {
+    $('.js-video-player').attr('src', song.previewUrl);
+  }
+  let $musicPlayer = $('.music-player');
+  console.log($musicPlayer);
+  $musicPlayer.get(0).style.display = "block";
+  $musicPlayer.get(0).style.visibility = "visible";
+});

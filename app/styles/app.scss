@@ -1,5 +1,6 @@
 // Bootstrap Variables
 $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
+
 // Import Bootstrap
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 
@@ -8,6 +9,7 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 *::before {
   box-sizing: border-box;
 }
+
 
 
 body {
@@ -25,32 +27,40 @@ justify-content: center;
 }
 
 .artist {
-  font-size: 20px;
+  font-size: 16px;
   margin-top: 5px;
+  margin-bottom: 0px;
+  max-width: 150px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
 .album {
-  font-size: 18px;
+  font-size: 14px;
+  color: #989982;
   margin: 0;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.track {
-  font-size: 16px;
-  text-decoration: none;
-  color: black;
+  max-width: 150px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
 .track-head {
-  margin: 0;
+  max-width: 150px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 10px;;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.track{
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+
 }
 
 
@@ -88,7 +98,7 @@ justify-content: center;
 .search-title {
   font-family: 'helvetica';
   color: #504F51;
-  font-size: 45px;
+  font-size: 40px;
   font-weight: 200;
   text-align: center;
   margin-bottom: 30px;
@@ -102,9 +112,9 @@ justify-content: center;
   font-size: 30px;
   font-weight: 200;
   text-align: center;
-
-
 }
+
+
 
 .video-image {
   margin-top: 20px;
@@ -137,6 +147,11 @@ justify-content: center;
   border-radius: 0px;
 }
 
+.search-button-song:focus {
+  outline: none;
+
+}
+
 .search-button-mv {
   background-color: #E3846D;
   color: #fff;
@@ -149,14 +164,32 @@ justify-content: center;
   border-radius: 0px;
 }
 
+.song-button-input:focus {
+  outline: 0;
+  box-shadow: none;
+  border: 2px solid #198786;
+}
+
 .mv-button-input {
   border: 2px solid #E3846D;
   border-radius: 0px;
 }
 
+.mv-button-input:focus {
+  outline: 0;
+  box-shadow: none;
+  border: 2px solid #E3846D;
+}
 .artist-button-input {
   border: 2px solid #A43CC1;
   border-radius: 0px;
+}
+
+.artist-button-input:focus {
+  outline: 0;
+  box-shadow: none;
+  border: 2px solid #A43CC1;
+
 }
 
 .form-display {
@@ -190,4 +223,9 @@ justify-content: center;
 .artwork {
   width: 200px;
   height: 200px;
+}
+
+.music-player {
+  display: none;
+  margin: 0 auto;
 }
